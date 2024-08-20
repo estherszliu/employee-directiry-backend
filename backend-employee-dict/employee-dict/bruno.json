@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "employee-dict",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
