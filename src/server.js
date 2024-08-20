@@ -14,6 +14,16 @@ app.get("/", (request, response, next) => {
 
 });
 
+
+const ContactRouter = require("./controllers/ContactRouter");
+app.use("/contacts", ContactRouter);
+
+
+
+app.get("*", (request, response) => {
+    response.json({message:"404 route activated!"})
+});
+
 app.use((error, request, response, next) => {
 
     response.status(500).json({
@@ -38,6 +48,7 @@ app.get("/dataseHealth", (request, response) => {
         dbHost: databaseHost
     })
 });
+
 
 
 module.exports = {
